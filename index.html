@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hun">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script>
+    <script src="/3/script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="texts">Sok sikert!</h1>
+    <h2 class="texts">Használat:</h2>
+    <h3 class="texts">1. Féjl kiválasztása, és "Upload" gomb</h3>
+    <h3 class="texts">2. Szöveg javítása szükség esetén</h3>
+    <h3 class="texts">3. "Get answer" megnyomása</h3>
+    <form class="formClass">
+        <input type="file" id="imageInput">
+        <button type="button" onclick="convertToDataURL()" class="buttonClass">Upload</button>
+    </form>
+    <form class="formClass">
+        <textarea type="textarea" id="recognizedText"></textarea>
+        <button type="button" onclick="answerButton()" class="buttonClass">Get answer</button>
+    </form>
+    <div id="asnwers"></div>
+</body>
+</html>
