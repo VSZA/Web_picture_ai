@@ -30,7 +30,7 @@
 
 
                 // Display recognized text
-                recognizedText.value = "Egy egyetemi 'Menedzsment Kontroll' nevű tárgy vizsgakérdéseit fogom elküldeni. Válaszolj a felelt választós és rövid kifejtős kérdésekre. A kifejtős kérdésekre a választ egy bicikli gyártó és forgalmazó cég példáján keresztül mutasd be 3-4 mondatban. Kérdések: " + "\n" +text;
+                recognizedText.value = "Egy egyetemi 'Menedzsment Kontroll' nevű tárgy vizsgakérdéseit fogom elküldeni. Válaszolj a felelt választós és rövid kifejtős kérdésekre. A kifejtős kérdésekre a választ egy olyan cégcsoport példáján keresztül mutasd be, ami foglalkozik: bicikli gyártással és forgalmazással, háztartási gépek beszerzésével és hazai nagykereskedelmével, informatikai rendszer és hálózat üzemeltetéssel. Kérdések: " + "\n" +text;
             })
             .catch(error => {
                 console.error('Error recognizing text:', error);
