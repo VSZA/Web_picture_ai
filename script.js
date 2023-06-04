@@ -30,7 +30,7 @@
 
 
                 // Display recognized text
-                recognizedText.value = text;
+                recognizedText.value = "Egy egyetemi 'Menedzsment Kontroll' nevű tárgy vizsgakérdéseit fogom elküldeni. Válaszolj a felelt választós és rövid kifejtős kérdésekre. A kifejtős kérdésekre a választ egy bicikli gyártó és forgalmazó cég példáján keresztül mutasd be 3-4 mondatban. Kérdések: " + "\n" +text;
             })
             .catch(error => {
                 console.error('Error recognizing text:', error);
@@ -57,10 +57,10 @@
           headers: headers,
           body: JSON.stringify({
             prompt: text,
-            max_tokens: 500,
+            max_tokens: 1000,
             n: 1,
             stop: "",
-            temperature: 0.5,
+            temperature: 0.3,
           })
         });
       
@@ -72,6 +72,7 @@
       
         const generatedText = data.choices[0].text;
       
-        console.log(i + "\n"+"Kérdés: " +text + "\n" + "\n" + "Válasz: " + generatedText + "\n" + "-----------------------------------------");
+        console.log("Kérdés: " +text + "\n" + "\n" + "Válasz: " + generatedText + "\n" + "-----------------------------------------");
+        document.getElementById('asnwerText').innerText = generatedText
       }
 // });
