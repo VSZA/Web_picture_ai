@@ -1,5 +1,5 @@
 // document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = "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";
+    const apiKey = "*****************************";
 
     function convertToDataURL() {
         var fileInput = document.getElementById('imageInput');
